@@ -41,12 +41,12 @@ const allReviews = [
 const App = () => {
     const [index, setIndex] = useState(0)
     function next() {
-        if (index == allReviews.length - 1) return
-        setIndex(index + 1)
+        if (index == allReviews.length - 1) setIndex(0)
+        else setIndex(index + 1)
     }
     function prev() {
-        if (index == 0) return
-        setIndex(index - 1)
+        if (index == 0) setIndex(allReviews.length-1)
+        else setIndex(index - 1)
     }
     function random() {
         let random
