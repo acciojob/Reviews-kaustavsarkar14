@@ -49,11 +49,11 @@ const App = () => {
         setIndex(index - 1)
     }
     function random() {
-        let random 
-        do{
-            random = Math.floor(Math.random() * allReviews.length )
+        let random
+        do {
+            random = Math.floor(Math.random() * allReviews.length)
         }
-        while(random==index)
+        while (random == index)
         console.log(random)
         setIndex(random)
     }
@@ -65,10 +65,10 @@ const App = () => {
                 <p className='job' >{allReviews[index].job}</p>
                 <p className='info' >{allReviews[index].text}</p>
                 <img height={"200px"} src={allReviews[index].image} alt="" className='person-img' />
+                <button className='prev-btn' onClick={prev}>Previous</button>
+                <button className='next-btn' onClick={next}>Next</button>
+                <button className='random-btn' onClick={random} >surprise me</button>
             </div>
-            <button className='prev-btn' onClick={prev}>Previous</button>
-            <button className='next-btn' onClick={next}>Next</button>
-            <button className='random-btn' onClick={random} >surprise me</button>
         </div>
     )
 }
