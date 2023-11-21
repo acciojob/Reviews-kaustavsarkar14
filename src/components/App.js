@@ -61,7 +61,7 @@ const App = () => {
         <div id='main' >
             <h1 id="review-heading">Our Reviews</h1>
             <div className="review">
-                <h3 className='author' id='author' >{allReviews[index].name}</h3>
+                <h3 className='author' id={`author-${allReviews[index].id}`} >{allReviews[index].name}</h3>
                 <p className='job' >{allReviews[index].job}</p>
                 <p className='info' >{allReviews[index].text}</p>
                 <img height={"200px"} src={allReviews[index].image} alt="" className='person-img' />
